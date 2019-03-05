@@ -1,29 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtmil" xmlns:fb="http://ogp.me/ns/fb#">
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8"/>
 		<meta name="author" content="George Varnavides"/>
-		<meta name="description" content="ONE MIT website"/>
-		<meta name="keywords" content="ONE,MIT,dome,wafer,electron,lithography"/>
+		<meta name="description" content="One.MIT website"/>
+		<meta name="keywords" content="One,MIT,nano,dome,wafer,electron,lithography"/>
+		<meta property="og:image" content="https://toodle.mit.edu/one-mit/images/mit-background.jpg"/>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title> One MIT Website v1 </title>
-	  	<link rel="stylesheet" href="main.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title> One.MIT Website </title>
+	  	<link rel="stylesheet" href="backgrounds.css"/>
 
-		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"/>
+		<link rel="stylesheet" type="text/css" href="fullPage/fullpage.css"/>
 		<script src="//code.jquery.com/jquery-1.12.4.js"></script>
 		<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.js"></script>
-		
-		<script type="text/javascript" src="autocomplete.js"></script>
+		<script type="text/javascript" src="fullPage/scrolloverflow.min.js"></script>
+		<script type="text/javascript" src="fullPage/fullpage.js"></script>
+		<script type="text/javascript" src="fullPage/license.js"></script>
 	</head>
 
 
 	<body>
-	<div class="ui-widget" style="text-align:center;">
-		<input id="name" placeholder="Start typing your full name.. (E.g. Mildred S Dresselhaus, Kofi Annan, L Rafael Reif)" style="width:750px;">
+	<div id="fullpage">
+		<div class="section active" id="section0">
+			<div class="ui-widget" style="text-align:center;">
+				<input id="name" class="input-res" type="text" style="font-size:1.5em; font-weight:bold; text-align:center;" placeholder="Start typing name.."></input>
+			</div>
+			<p align="center" style="display:inline-block; margin: 1.5em auto; color:#FFFFFF; font-weight:bold; font-size:1.25em;"> HINT: leave out any periods, commas, or apostrophes </p>
+		</div>
+		
+		<div class="section" id="section1">
+			<div> <h1 style="font-size:2em;"> Scroll Horizontally to Locate Yourself </h1></div>
+			<div class="slide">
+				<img id="slide1" src="" style="display: block; padding:0; margin: 0 auto; height:75%;width:75%;" class="svg example-class" alt="">
+				<p id="label1" align="center" style="display:inline-block; margin: 2.5em auto;"></p>
+			</div>
+			<div class="slide">
+				<img id="slide2" src="" style="display: block; padding:0; margin: 0 auto; height:75%;width:75%;" class="svg example-class" alt="">
+				<p id="label2" align="center" style="display:inline-block; margin: 2.5em auto;"></p>
+			</div>
+			<div class="slide">
+				<img id="slide3" src="" style="display: block; padding:0; margin: 0 auto; height:75%;width:75%;" class="svg example-class" alt="">
+				<p id="label3" align="center" style="display:inline-block; margin: 2.5em auto;"></p>
+			</div>
+		</div>
+
+		<div class="section" id="section2">
+			<div> <h1 style="font-size:2em;"> One.MIT </h1></div>
+			<div class="slide">
+				<div class="item_description">
+					<div class="image" style="background-image:url('images/about-Wall.png');"></div>
+					<div class="desc">
+						<h2 style="color: #2A5DB0; font-size:1.5em;">Many generations, one community.</h2>
+						<p style="text-align:left; font-size:1.5em;">MIT's Great Dome has come to symbolize our community of faculty, students, staff, and alumni. Now these individuals have lent their names to embody the Great Dome. The image in this exhibit incorporates the names of every member of the MIT community from our founding in 1861 - more than 270,000 individuals in all - which have been etched into the surface of a silicon wafer. The result: generation after generation coming together to represent the shared history, character, and sense of purpose that unites us. We call the project "One.MIT". It's an apt name for an exhibit in MIT.nano, which serves every department and any researcher who needs its tools. Visit the One.MIT installation in the First Floor Gallery at <a style="text-decoration:none; color: #2A5DB0;" href="https://whereis.mit.edu/?go=12">MIT.nano</a>. Scroll horizontally to find out how it was made..</p>
+					</div>
+				</div>
+			</div>
+			<div class="slide">
+				<div class="item_description">
+					<div class="image" style="background-image:url('images/about-OCR4.png');"></div>
+					<div class="desc">
+						<h2 style="color: #2A5DB0; font-size:1.5em;">Gathering the names.</h2>
+						<p style="text-align:left; font-size:1.5em;">Over 270,000 names are etched in the wafer; representing names, students, faculty, staff, and alumni since 1861. The Alumni office and the Institutional Research group keep the list of students and alumni, as well as a list of faculty and staff since 1991 onwards. The records of faculty and staff before 1991 existed only in paper form.. With the help of MIT Libraries and the Institute Archives, we had to scan in and perform optical character recognition (OCR) on over 6,000 pages of old paper directories. It then took a combination of custom-built programs to extract the text from the digitized data, reformat the names, and remove duplicates, plus hours of manual editing to catch OCR problems and other errors. Even so, as our historians and archivists remind us, no record is perfect!</p>
+					</div>
+				</div>
+			</div>
+			<div class="slide">
+				<div class="item_description">
+					<div class="image" style="background-image:url('images/about-Millie.png');"></div>
+					<div class="desc">
+						<h2 style="color: #2A5DB0; font-size:1.5em;">Creating the image.</h2>
+						<p style="text-align:left; font-size:1.5em;">Each letter was drawn as dark or light. Each letter inherited its characteristics from the underlying drawing of MIT's Great Dome. The global text size was determined by an algorithm to maximally fill the printing space, which is an nonlinear optimization problem. The code was written in the Wolfram Language and TeX. Each letter had to be turned to a vector object due to file size considerations. Even so, the vector data was too large to be printed and thus was separated into multiple PDFs. The PDFs were subsequently combined and converted to a CAD format that could be processed by a direct-write photolithography system. How long did the computational process to create the image take? Many many long hours and days on a high performance workstation. How large and complex are the files? Just opening the PDF file is a challenge on a typical workstation, and the final CAD layout was more than 4GBs.</p>
+					</div>
+				</div>
+			</div>
+			<div class="slide">
+				<div class="item_description">
+					<div class="image" style="background-image:url('images/about-Wafer.png');"></div>
+					<div class="desc">
+						<h2 style="color: #2A5DB0; font-size:1.5em;">Fabricating the wafer.</h2>
+						<p style="text-align:left; font-size:1.5em;">Despite the complexity of computationally generating the image and layout files, patterning the tiny text on the silicon wafer was easy.. if you're familiar with the fabrication process used everyday for micro- and nano- technology. First, the specially cleaned wafer was loaded into an oxidation furnace at 1000&deg;Celsius to grow a silicon dioxide layer approximately 100nm thick. Although colorless, this oxide layer appears dark blue due to the interference of light reflecting off the silicon and oxide surfaces. The wafer was then coated with photo-resist and exposed in Heidelberg MLA-150 direct-write photolithography tool to make an etch mask. Finally, the oxide layer was selectively etched and the photoresist removed to create the image on the wafer.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section" id="section3">
+			<div> <h1 style="font-size:2em;"> Creative Team </h1></div>
+			<div class="grid-container">
+				<div class="grid-row">
+					<div class="grid-item">
+						<div class="content">
+							<div class="content-overlay"></div>
+							<img class="content-image" id="HE" src="images/thumbnail-Heidi_Erickson.jpg"></img>
+							<div class="content-details fadeIn-bottom">
+								<h3 class="content-title">Heidi Erickson</h3>
+								<p class="content-text"> Graphic Designer and Web Administrator, Arts at MIT</p>
+								<p class="content-text"> Original Dome Drawing</p>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="content">
+							<div class="content-overlay"></div>
+							<img class="content-image" id="CC" src="images/thumbnail-Craig_Carter.jpg"></img>
+							<div class="content-details fadeIn-bottom">
+								<h3 class="content-title">Craig Carter</h3>
+								<p class="content-text"> POSCO Professor and MacVicar Fellow, DMSE</p>
+								<p class="content-text"> Computational Implementation, Website Design</p>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="content">
+							<div class="content-overlay"></div>
+							<img class="content-image" id="VB" src="images/thumbnail-Vladimir_Bulovic.jpg"></img>
+							<div class="content-details fadeIn-bottom">
+								<h3 class="content-title">Vladimir Bulovic</h3>
+								<p class="content-text">Director of MIT.nano, Professor of Engineering and MacVicar Fellow</p>
+								<p class="content-text">Project Idea, Project Space, and Commisioning</p>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="content">
+							<div class="content-overlay"></div>
+							<img class="content-image" id="AW" src="images/thumbnail-Annie_Wang.jpg"></img>
+							<div class="content-details fadeIn-bottom">
+								<h3 class="content-title">Annie Wang</h3>
+								<p class="content-text">Research Scientist, Special Projects MIT.nano</p>
+								<p class="content-text">Project Coordination, MIT Name Lists, CAD File Preparation</p>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="content">
+							<div class="content-overlay"></div>
+							<img class="content-image" id="KR" src="images/about-Wafer.png"></img>
+							<div class="content-details fadeIn-bottom">
+								<h3 class="content-title">MIT Community</h3>
+								<p class="content-text">Inspiration and Support</p>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="content">
+							<div class="content-overlay"></div>
+							<img class="content-image" id="GV" src="images/thumbnail-George_Varnavides.jpg"></img>
+							<div class="content-details fadeIn-bottom">
+								<h3 class="content-title">George Varnavides</h3>
+								<p class="content-text"> Graduate Student, DMSE</p>
+								<p class="content-text"> Name Search Implementation, Website Development</p>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="content">
+							<div class="content-overlay"></div>
+							<img class="content-image" id="DW" src="images/thumbnail-Dennis_Ward.jpg"></img>
+							<div class="content-details fadeIn-bottom">
+								<h3 class="content-title">Dennis Ward</h3>
+								<p class="content-text"> Research Specialist, Microsystems Technology Laboratories</p>
+								<p class="content-text"> Wafer Fabrication</p>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="content">
+							<div class="content-overlay"></div>
+							<img class="content-image" id="KP" src="images/thumbnail-Kris_Payer.jpg"></img>
+							<div class="content-details fadeIn-bottom">
+								<h3 class="content-title">Kris Payer</h3>
+								<p class="content-text"> Research Specialist, Microsystems Technology Laboratories</p>
+								<p class="content-text"> Wafer Fabrication</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<p style="display: inline-block; margin: 50px; text-align:justify; font-size:1.5em;"> <b> Special thanks to Jon Daries, Lydia Snover</b> | Office of the Provost, Institutional Research; <b>Vicky Diadiuk</b> | Microsystems Technology Laboratory; <b>Mark Mondol</b> | Nanostructures Laboratory; <b>Katherine Higgins, Leila Kinney </b>| Center of Art, Science, and Technology; <b> Nora Murphy </b>| Institute Archives and Special Collections; <b> Jennifer Morris </b>| MIT Libraries; <b>Deborah Douglas </b>| MIT Museum; <b> Kai-yuh Hsiao, Jocelyn Shiue, Haripriya Mehta; Israel Ruiz</b> | Executive Vice President and Treasurer, MIT; Class of 2018 Senior Class Gift; and many others who expressed their excitement and support for this project.</p>
+			</div>
+		</div>
 	</div>
-	<img id="pdf" border="0" src="" style="display: block; margin-left: auto; margin-right: auto;width:1500px;" class="svg example-class" alt=""></img>
-	<p id="label" align="center"></p>
+		<script type="text/javascript" src="autocomplete.js"></script>
 	</body>
 </html>

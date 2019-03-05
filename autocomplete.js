@@ -1,3 +1,14 @@
+var license = config.license;
+$('#fullpage').fullpage({
+	//License
+	licenseKey: license,
+	//Navigation
+	anchors: ['search','locate','about','team'],
+	//Scrolling
+	autoScrolling:true,
+	scrollOverflow:true,
+});
+
 $('img.svg').each(function(){
         var $img = jQuery(this);
         var imgID = $img.attr('id');
@@ -38,8 +49,13 @@ $(function() {
 		},
 		select: function(event, ui){
 			$("#name").val(ui.item.label);
-			$("#label").html("<a href="+ui.item.value+" style='color: #2A5DB0;'>CLICK HERE TO DOWNLOAD PDF</a>");
-			$("#pdf").attr("src",ui.item.value.substr(0,ui.item.value.lastIndexOf("."))+".svg");
+			$("#label1").html("<a href="+ui.item.value+" style='color: #2A5DB0; text-decoration: none; font-weight:bold; font-size: 1.5em;'>DOWNLOAD PDF</a>");
+			$("#slide1").attr("src",ui.item.value.substr(0,ui.item.value.lastIndexOf("."))+"_1.svg");
+			$("#label2").html("<a href="+ui.item.value+" style='color: #2A5DB0; text-decoration: none; font-weight:bold; font-size: 1.5em;'>DOWNLOAD PDF</a>");
+			$("#slide2").attr("src",ui.item.value.substr(0,ui.item.value.lastIndexOf("."))+"_2.svg");
+			$("#label3").html("<a href="+ui.item.value+" style='color: #2A5DB0; text-decoration: none; font-weight:bold; font-size: 1.5em;'>DOWNLOAD PDF</a>");
+			$("#slide3").attr("src",ui.item.value.substr(0,ui.item.value.lastIndexOf("."))+"_3.svg");
+			window.location = "#locate";
 			return false;
 		}
 

@@ -8,34 +8,20 @@
 	//get search term
 	$searchTerm = $_GET['term'];
 	$words=explode(" ",$searchTerm);
-	$number=count($words);
-
-	if($number==1){
-		$query = $db->query("SELECT DISTINCT * FROM locations WHERE firstName LIKE '%".$words[0]."%' OR secondName LIKE '%".$words[0]."%' OR thirdName LIKE '%".$words[0]."%' LIMIT 15");
-	}elseif($number==2){
-		$query = $db->query("SELECT DISTINCT * FROM locations WHERE 
-			(firstName LIKE '%".$words[0]."%' AND secondName LIKE '%".$words[1]."%')  OR
-		       	(firstName LIKE '%".$words[0]."%' AND thirdName LIKE '%".$words[1]."%')   OR 
-		       	(secondName LIKE '%".$words[0]."%' AND firstName LIKE '%".$words[1]."%')  OR 
-		       	(secondName LIKE '%".$words[0]."%' AND thirdName LIKE '%".$words[1]."%')  OR 
-		       	(thirdName LIKE '%".$words[0]."%' AND firstName LIKE '%".$words[1]."%')   OR 
-		       	(thirdName LIKE '%".$words[0]."%' AND secondName LIKE '%".$words[1]."%') 
-			LIMIT 15");
-	}else{
-		$query = $db->query("SELECT DISTINCT * FROM locations WHERE 
-			(firstName LIKE '%".$words[0]."%' AND secondName LIKE '%".$words[1]."%' AND thirdName LIKE '%".$words[2]."%') OR
-		       	(firstName LIKE '%".$words[0]."%' AND thirdName LIKE '%".$words[1]."%' AND secondName LIKE '%".$words[2]."%') OR 
-		       	(secondName LIKE '%".$words[0]."%' AND firstName LIKE '%".$words[1]."%' AND thirdName LIKE '%".$words[2]."%') OR 
-		       	(secondName LIKE '%".$words[0]."%' AND thirdName LIKE '%".$words[1]."%' AND firstName LIKE '%".$words[2]."%') OR 
-		       	(thirdName LIKE '%".$words[0]."%' AND firstName LIKE '%".$words[1]."%' AND secondName LIKE '%".$words[2]."%') OR 
-		       	(thirdName LIKE '%".$words[0]."%' AND secondName LIKE '%".$words[1]."%' AND firstName LIKE '%".$words[2]."%') 
-			LIMIT 15");
+	$strings=array();
+	foreach($words as $substring){
+		$strings[]="fullName LIKE '%".$substring."%'";
 	}
+	$imploded=implode($strings," AND ");
+	$queryString="SELECT DISTINCT * FROM locations WHERE ".$imploded." LIMIT 15";
+
+	$query = $db->query($queryString);
+	
 	//get matched data from table
 	while ($row = $query->fetch_assoc()) {
 
 		$row['value']=stripslashes($row['fileLocation']);
-		$row['label']=implode(" ", array($row['firstName'],$row['secondName'],$row['thirdName']));
+		$row['label']=$row['fullName'];
 		$row_set[] = $row;
 	}
     
