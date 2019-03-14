@@ -13,7 +13,7 @@
 		$strings[]="fullName LIKE '%".$substring."%'";
 	}
 	$imploded=implode($strings," AND ");
-	$queryString="SELECT DISTINCT * FROM locations WHERE ".$imploded." LIMIT 15";
+	$queryString="SELECT DISTINCT * FROM locations WHERE ".$imploded." LIMIT 50";
 
 	$query = $db->query($queryString);
 	

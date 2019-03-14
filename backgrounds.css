@@ -50,6 +50,15 @@
 	text-overflow:ellipsis;
 }
 
+.ui-autocomplete{
+	max-height: 35%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-right: 20px;
+
+}
+
+
 ul.ui-autocomplete li.ui-menu-item{
 	text-align:center;
 	font-size:1.5em;

@@ -7,6 +7,7 @@ $('#fullpage').fullpage({
 	//Scrolling
 	autoScrolling:true,
 	scrollOverflow:true,
+	scrollBar:true
 });
 
 $('img.svg').each(function(){
