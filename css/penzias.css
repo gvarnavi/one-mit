@@ -1,0 +1,196 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 18, 2019, 11:24:34 AM
+    Author     : Mike
+*/
+
+@font-face {
+    font-family: 'titillium';
+    src: url('fonts/titillium/titilliumweb-bold.woff2') format('woff2'),
+         url('fonts/titillium/titilliumweb-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'titillium';
+    src: url('fonts/titillium/titilliumweb-italic.woff2') format('woff2'),
+         url('fonts/titillium/titilliumweb-italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'titillium';
+    src: url('fonts/titillium/titilliumweb-regular.woff2') format('woff2'),
+         url('fonts/titillium/titilliumweb-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'titillium';
+    src: url('fonts/titillium/titilliumweb-semibold.woff2') format('woff2'),
+         url('fonts/titillium/titilliumweb-semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+body{
+    font-family: 'titillium';
+}
+
+.container{
+    max-width: 1160px;
+    margin: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding: 20px 0;
+    background: rgba(255,255,255,.9);
+    border-bottom: 1px solid #000;
+}
+.fixed-header .page-content{
+    padding-top: 102px;
+}
+
+#logo{
+    float: left;
+}
+#logo h1{
+    margin: 0;
+}
+#logo a{
+    display: block;
+    line-height: 1;
+    font-size: 36px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+.burger{
+    display: none;
+}
+
+#main-menu{
+    float: right;
+    font-size: 16px;
+    margin-top: 5px;
+}
+nav ul{
+    padding: 0;
+    margin: 0;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+nav ul li:first-child{
+    margin-left: 0;
+}
+nav ul li a{
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+nav ul li a:after{
+    margin-top: 5px;
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    content: '';
+    display: block;
+    -webkit-transform: scale3d(0,1,1);
+    transform: scale3d(0,1,1);
+    -webkit-transform-origin: center right;
+    -ms-transform-origin: center right;
+    transform-origin: center right;
+    -webkit-transition: -webkit-transform .5s cubic-bezier(.075,.82,.165,1);
+    transition: -webkit-transform .5s cubic-bezier(.075,.82,.165,1);
+    -o-transition: transform .5s cubic-bezier(.075,.82,.165,1);
+    transition: transform .5s cubic-bezier(.075,.82,.165,1);
+    transition: transform .5s cubic-bezier(.075,.82,.165,1),-webkit-transform .5s cubic-bezier(.075,.82,.165,1);
+}
+nav ul li a:hover:after{
+        -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+    -webkit-transform-origin: center left;
+    -ms-transform-origin: center left;
+    transform-origin: center left;
+}
+
+.fp-controlArrow.fp-prev,
+.fp-controlArrow.fp-next{
+    border: none;
+    height: 77px;
+    width: 34px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.fp-controlArrow.fp-prev{
+    background-image: url(images/slide-left.png);
+}
+.fp-controlArrow.fp-next{
+    background-image: url(images/slide-right.png);
+}
+
+h2{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+h3{
+    font-weight: normal;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+p{
+    margin-top: 0;
+}
+
+@media(max-width:1800px){
+	.grid-item{
+		flex-basis: 33%;
+	}
+}
+
+@media(max-width:1200px){
+	.grid-item{
+		flex-basis: 50%;
+	}
+}
+
+@media (max-width:1025px) {
+	.desc, .image {
+		width:100%;
+	}
+        .desc{
+            margin-top: 25px;
+        }
+        .burger{
+        display: block;
+        }
+        #main-menu{
+            visibility: hidden;
+            height: 0;
+            margin: 0;
+        }
+}
+@media(max-width:800px){
+	.grid-item{
+		flex-basis: 100%;
+	}
+}

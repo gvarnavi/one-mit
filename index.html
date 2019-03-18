@@ -12,25 +12,57 @@
 
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"/>
 		<link rel="stylesheet" type="text/css" href="fullPage/fullpage.css"/>
+                <link rel="stylesheet" type="text/css" href="css/penzias.css"/>             
+                <link rel="stylesheet" type="text/css" href="css/side-menu.css"/>
 		<script src="//code.jquery.com/jquery-1.12.4.js"></script>
 		<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		<script type="text/javascript" src="fullPage/scrolloverflow.min.js"></script>
 		<script type="text/javascript" src="fullPage/fullpage.js"></script>
+                <script type="text/javascript" src="fullPage/fullpage.extensions.min.js"></script>
+                <script type="text/javascript" src="js/penzias.js"></script>
 		<script type="text/javascript" src="fullPage/license.js"></script>
 	</head>
 
 
 	<body>
+        <!-- Header -->
+        <header id="header" role="banner">
+            <div class="container clearfix">
+                <div id="logo">
+                    <h1><a href="/">ONE.MIT</a></h1>
+                </div>
+                <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+                <nav id="main-menu" role="navigation">
+                    <ul class="menu">
+                        <li><a href="#search">Find a Name</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a target="_blank" href="https://mitnano.mit.edu/">MIT.nano</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <div id="side-menu-wrapper" aria-hidden="true">
+            <div class="container">
+                <div id="side-menu-close"><span class="side-menu-close-button">Close</span></div>
+            <div class="mobile-menu"></div>
+            </div>
+        </div>
+        
 	<div id="fullpage">
 		<div class="section active" id="section0">
+                    <div class="container clearfix">
 			<div class="ui-widget" style="text-align:center;">
 				<input id="name" class="input-res" type="text" style="font-size:1.5em; font-weight:bold; text-align:center;" placeholder="Start typing name.."></input>
 			</div>
-			<p align="center" style="display:inline-block; margin: 1.5em auto; color:#FFFFFF; font-weight:bold; font-size:1.25em;"> HINT: leave out any periods, commas, or apostrophes </p>
-		</div>
+			<p align="center" style="text-shadow: 3px 3px 0 rgba(0,0,0,.3);display:inline-block; margin: 1.5em auto; color:#FFFFFF; font-weight:bold; font-size:1.25em;"> HINT: leave out any periods, commas, or apostrophes </p>
+                    </div>
+                </div>
 		
 		<div class="section" id="section1">
-			<div> <h1 style="font-size:2em;"> Scroll Horizontally to Locate Yourself </h1></div>
+                    <div class="container clearfix">
+			<div> <h2> Scroll Horizontally to Locate Yourself </h2></div>
 			<div class="slide">
 				<img id="slide1" src="" style="display: block; padding:0; margin: 0 auto; height:75%;width:75%;" class="svg example-class" alt="">
 				<p id="label1" align="center" style="display:inline-block; margin: 2.5em auto;"></p>
@@ -43,15 +75,17 @@
 				<img id="slide3" src="" style="display: block; padding:0; margin: 0 auto; height:75%;width:75%;" class="svg example-class" alt="">
 				<p id="label3" align="center" style="display:inline-block; margin: 2.5em auto;"></p>
 			</div>
+                    </div>
 		</div>
 
-		<div class="section" id="section2">
-			<div> <h1 style="font-size:2em;"> One.MIT </h1></div>
+		<div class="section fp-auto-height-responsive" id="section2">
+                    <div class="container clearfix">
+			<div> <h2> One.MIT </h2></div>
 			<div class="slide">
 				<div class="item_description">
 					<div class="image" style="background-image:url('images/about-Wall.png');"></div>
 					<div class="desc">
-						<h2 style="color: #2A5DB0; font-size:1.5em;">Many generations, one community.</h2>
+						<h3>Many generations, one community.</h3>
 						<p style="text-align:left; font-size:1.5em;">
 						MIT's Great Dome has come to symbolize our community of faculty, students, staff, and alumni.
 						Now these individuals have lent their names to embody the Great Dome.
@@ -67,7 +101,7 @@
 				<div class="item_description">
 					<div class="image" style="background-image:url('images/about-OCR4.png');"></div>
 					<div class="desc">
-						<h2 style="color: #2A5DB0; font-size:1.5em;">Gathering the names.</h2>
+						<h3>Gathering the names.</h3>
 						<p style="text-align:left; font-size:1.5em;">
 						Over 270,000 names are etched in the wafer representing names, students, faculty, staff, and alumni since 1861 up to the spring of 2018.
 						The Alumni Association and Institutional Research keep the lists of students and alumni, as well as lists of faculty and staff since 1991 onwards.
@@ -83,7 +117,7 @@
 				<div class="item_description">
 					<div class="image" style="background-image:url('images/about-Millie.png');"></div>
 					<div class="desc">
-						<h2 style="color: #2A5DB0; font-size:1.5em;">Creating the image.</h2>
+						<h3>Creating the image.</h3>
 						<p style="text-align:left; font-size:1.5em;">
 						Each letter was drawn as dark or light. 
 						Each letter inherited its characteristics from the underlying drawing of MIT's Great Dome.
@@ -103,7 +137,7 @@
 				<div class="item_description">
 					<div class="image" style="background-image:url('images/about-Wafer.png');"></div>
 					<div class="desc">
-						<h2 style="color: #2A5DB0; font-size:1.5em;">Fabricating the wafer.</h2>
+						<h3>Fabricating the wafer.</h3>
 						<p style="text-align:left; font-size:1.5em;">
 						Despite the complexity of computationally generating the image and layout files, patterning the tiny text on the silicon wafer was easy - for someone familiar with the fabrication process used every day for micro- and nano- technology.
 						First, the specially cleaned wafer was loaded into an oxidation furnace at 1000&deg;Celsius to grow a silicon dioxide layer approximately 100nm thick.
@@ -114,10 +148,12 @@
 					</div>
 				</div>
 			</div>
+                    </div>
 		</div>
 
-		<div class="section" id="section3">
-			<div> <h1 style="font-size:2em;"> Creative Team </h1></div>
+		<div class="section fp-auto-height-responsive" id="section3">
+                    <div class="container clearfix">
+			<div> <h2> Creative Team </h2></div>
 			<div class="grid-container">
 				<div class="grid-row">
 					<div class="grid-item">
@@ -210,7 +246,7 @@
 				</div>
 			</div>
 			<div>
-				<p style="display: inline-block; margin: 50px; text-align:justify; font-size:1.5em;"> 
+				<p style="display: inline-block; margin: 25px 50px; text-align:justify; font-size:1.5em;"> 
 				Special thanks to
 				<b>Jon Daries, Lydia Snover</b> | Office of the Provost, Institutional Research; 
 				<b>Vicky Diadiuk</b> | Microsystems Technology Laboratory; 
@@ -226,6 +262,7 @@
 				and many others who expressed their excitement and support for this project.</p>
 			</div>
 		</div>
+                </div>
 	</div>
 		<script type="text/javascript" src="autocomplete.js"></script>
 	</body>

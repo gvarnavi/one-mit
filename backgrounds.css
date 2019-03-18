@@ -115,23 +115,19 @@ ul.ui-autocomplete li.ui-menu-item{
 }
 
 .desc, .image {
-	float:left;
-	display:block;
+	display: inline-block;
+        vertical-align: middle;
 }
 
 .desc {
-	width:60%;
+	width:59%;
 	text-align:center;
-	padding:0 5%;
+	padding:0 0 0 30px;
 	box-sizing:border-box;
+        font-size: 14px;
 }
 
-@media (max-width:1266px) {
-	.desc, .image {
-		float:none;
-		width:100%;
-	}
-}
+
 
 .grid-container{
 	width:90%;
@@ -145,11 +141,10 @@ ul.ui-autocomplete li.ui-menu-item{
 }
 
 .grid-item{
-	height: 375px;
 	flex-basis:25%;
 	-ms-flex:auto;
-	width:375px;
 	box-sizing:border-box;
+        margin-bottom: 10px;
 }
 
 .content{
@@ -223,24 +218,5 @@ ul.ui-autocomplete li.ui-menu-item{
 
 .fadeIn-bottom{
 	top: 80%;
-}
-
-@media(max-width:1800px){
-	.grid-item{
-		flex-basis: 33%;
-	}
-}
-
-@media(max-width:1200px){
-	.grid-item{
-		flex-basis: 50%;
-	}
-}
-
-
-@media(max-width:800px){
-	.grid-item{
-		flex-basis: 100%;
-	}
 }
 
