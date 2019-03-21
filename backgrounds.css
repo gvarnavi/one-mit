@@ -188,8 +188,9 @@ ul.ui-autocomplete li.ui-menu-item{
 .content-details {
 	position: absolute;
 	text-align: center;
-	padding-left: 1em;
-	padding-right: 1em;
+	padding-left: 10px;
+	padding-right: 10px;
+        box-sizing: border-box;
 	width: 100%;
 	top: 50%;
 	left: 50%;
@@ -216,11 +217,13 @@ ul.ui-autocomplete li.ui-menu-item{
 	letter-spacing: 0.15em;
 	margin-bottom: 0.5em;
 	text-transform: uppercase;
+        font-size: 16px;
 }
 
 .content-details p{
 	color: #fff;
-	font-size: 0.8em;
+	font-size: 12px;
+        margin-bottom: 5px;
 }
 
 .fadeIn-bottom{
