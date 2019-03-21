@@ -4,6 +4,7 @@
     line-height: 1;
     font-size: 55px;
     float: right;
+    margin-top: 5px;
 }
 .burger > span{
     height: 7px;

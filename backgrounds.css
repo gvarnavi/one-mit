@@ -79,7 +79,7 @@ ul.ui-autocomplete li.ui-menu-item{
 }
 
 #section0{
-	background-image: url(images/mit-background.jpg);
+	background-image: url(images/landing-straight.jpg);
 }
 
 #section1{
@@ -94,8 +94,15 @@ ul.ui-autocomplete li.ui-menu-item{
 #section3{
 	background-image: url(images/mit-background-washed.jpg);
 }
+#section4{
+        background-image: url(images/one-visit-overlay.jpg);
+}
 
-
+#section0 h2,
+#section0 p{
+    color: #FFF;
+    text-shadow: 1px 1px 10px rgba(0,0,0,.3);
+}
 
 .item_description {
 	width:90%;

@@ -3,7 +3,7 @@ $('#fullpage').fullpage({
 	//License
 	licenseKey: license,
 	//Navigation
-	anchors: ['search','locate','about','team'],
+	anchors: ['search','locate','about','visit','team'],
 	//Scrolling
 	autoScrolling:true,
 	scrollOverflow:true,

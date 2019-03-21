@@ -64,9 +64,6 @@ header{
     padding-top: 102px;
 }
 
-#logo{
-    float: left;
-}
 #logo h1{
     margin: 0;
 }
@@ -78,6 +75,9 @@ header{
     text-decoration: none;
     font-weight: 600;
 }
+#logo a:hover{
+    color:#8A8B8C;
+}
 .burger{
     display: none;
 }
@@ -85,7 +85,7 @@ header{
 #main-menu{
     float: right;
     font-size: 16px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 nav ul{
     padding: 0;
@@ -159,6 +159,48 @@ h3{
 }
 p{
     margin-top: 0;
+}
+
+#section4{
+    text-shadow: 1px 1px 10px rgba(255,255,255,.2);
+}
+#section4 h2{
+    font-size: 40px;
+}
+#section4 p{
+     font-size: 18px;
+     max-width: 720px;
+     margin: auto;
+     font-size: 28px;
+     margin: auto;
+     max-width: 800px;
+}
+#logo{
+    display: inline-block;
+    vertical-align: middle;
+}
+#mit-logo{
+    width: 60px;
+    padding: 6px 18px 6px 0;
+    margin-right: 11px;
+    border-right: 1px solid #808285;
+    display: inline-block;
+    vertical-align: middle;
+}
+#mit-logo a{
+    display: block;
+}
+#mit-logo a img {
+    width: 100%;
+    vertical-align: bottom;
+}
+#mit-logo a:hover .on,
+#mit-logo a .off {
+    display: none;
+}
+
+#mit-logo a:hover .off{
+    display: block;
 }
 
 @media(max-width:1800px){
