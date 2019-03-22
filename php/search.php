@@ -1,7 +1,12 @@
 <?php
+	if(!$_SERVER['HTTP_X_REQUESTED_WITH'])
+	{
+		   header("HTTP/1.0 403 Forbidden");
+		      exit;
+	}
 	header('Content-type: application/json');
 	
-	include 'db-init.php';
+	include '/var/www/includes/db-init.php';
 	//connect with the database
 	$db = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
     
@@ -18,7 +23,7 @@
 
 	//perform query
 	$maxQuery=15;
-	$queryString="SELECT DISTINCT * FROM locations WHERE ".$imploded." LIMIT ".$maxQuery;
+	$queryString="SELECT DISTINCT * FROM locations WHERE ".$imploded." ORDER BY (levenshtein(fullName,'".$searchTerm."')) ASC LIMIT ".$maxQuery;
 	$query = $db->query($queryString);
 	
 	//get matched data from table

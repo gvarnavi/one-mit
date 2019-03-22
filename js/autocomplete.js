@@ -46,7 +46,7 @@ $(function() {
 				response(cache[term]);
 				return;
 				}
-			$.getJSON('search.php',request,function(data){
+			$.getJSON('php/search.php',request,function(data){
 				cache[term]=data;
 				response(data);
 			});
